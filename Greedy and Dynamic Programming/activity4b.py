@@ -1,5 +1,5 @@
 INF = 10e9 + 7
-coins = [6, 5, 1]
+coins = [50, 25, 20, 10, 5, 1]
 memo = {}
 
 def min_num_coins(x):
