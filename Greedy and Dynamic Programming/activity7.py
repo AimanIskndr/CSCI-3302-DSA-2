@@ -1,18 +1,14 @@
-memo = {}
-things = [[2, 20], [5, 30], [10, 50], [5, 10]]
+dp = [[0] * 17 for _ in range(5)]
+things = [[0, 0], [2, 20], [5, 30], [10, 50], [5, 10]]
 
-def solve(w):
-    
-    if w in memo:
-        return memo[w]
-    
-    best = 0
-    for k, v in things:
-        if w - k >= 0:
-            best = max(best, solve(w-k) + v)
+def K(W):
+    n = len(things)
+    for i in range(1, n):
+        w, v = things[i]
+        for j in range(W + 1):
+            dp[i][j] = dp[i-1][j]
+            if j >= w:
+                dp[i][j] = max(dp[i-1][j-w] + v, dp[i][j])
+    return dp[n-1][W]
 
-    memo[w] = best
-    return memo[w]
-
-print(solve(16)) # output: 160
-
+print(K(16))
