@@ -11,11 +11,11 @@ using namespace std;
 const int INF = 1e9 + 7;
 vector<vector<int>> graph;
 
-void make_graph(int num_of_vertices, int num_of_edges) {
-    graph.assign(num_of_vertices, vector<int>(num_of_vertices, INF)); // set default value to INF
+void make_graph(int V, int E){
+    graph.assign(V, vector<int>(V, INF)); // set default value to INF
     
     int u, v, w;
-    for (int i = 0; i < num_of_edges; i++) {
+    for(int i = 0; i < E; i++){
         cin >> u >> v >> w;
         graph[u][v] = w;
         graph[v][u] = w;
