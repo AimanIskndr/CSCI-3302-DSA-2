@@ -11,8 +11,6 @@ using namespace std;
 const int INF = 1e9+7;
 map<pair<char, char>, int> Edge;
 map<char, vector<pair<char, int>>> Vertex;
-map<char, int> dist;
-map<char, char> previous;
 
 void make_graph(int n){
     Vertex.clear();
