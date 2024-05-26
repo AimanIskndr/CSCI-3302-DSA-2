@@ -1,5 +1,5 @@
 /*
-Weighted Unidirected Graph
+Weighted Unidirected Graph Adjacency List Representation
 Input Format:
 [num_of_vertices] [num_of_edges]
 [Node 1] [Node 2] [Weight]   <-  will be multiple lines (number of lines = num_of_edges) 
